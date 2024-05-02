@@ -10,8 +10,8 @@ spring:
       max-file-size: 1GB
       max-request-size: 1GB
   # Development properties (also used for docker-compose)
-  config:
-    import: optional:file:.env[.properties]
+#  config:
+#    import: optional:file:.env[.properties]
 site:
   id: 1
 
