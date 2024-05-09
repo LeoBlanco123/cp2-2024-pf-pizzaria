@@ -69,4 +69,16 @@ public class Produto {
             }
     )
     private Set<Opcional> opcionais = new LinkedHashSet<>();
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(
+            name = "FOTO",
+            referencedColumnName = "ID_FOTO",
+            foreignKey = @ForeignKey(
+                    name = "FK_FOTO_PRODUTO"
+            )
+    )
+    private Foto foto;
+
+
 }
